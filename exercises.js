@@ -291,10 +291,11 @@ console.log (shoeSize (x, inCentimeters));
  * Example output: "BELIEVE YOU CAN AND YOU'RE HALFWAY THERE."
 */
  function allCaps (str){
-
+ 	return ("believe you can and you're halfway there")
  }
-var 
-
+var str = "believe you can and you're halfway there";
+var res = str.toUpperCase();
+console.log (allCaps, res)
 /*
  * #16
  * Function oneCap
@@ -302,10 +303,12 @@ var
  * This function will capitalize only the first letter in the variable phase above. 
  * Console.log your result.
 */
-function oneCap (str){
-	return 
+//capitalize_Words 
+function oneCap(str)
+{
+ return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 }
-
+console.log (oneCap('js string exercises'));
 
 /*
  * #17
@@ -317,13 +320,26 @@ function oneCap (str){
  * Call this function and pass in a number value.
  * Store the return value to a variable named `canDrink`. Console.log your result.
  */
-
-
-
-/**
+function verifyDrinkingAge (canDrink){
+	return ("Legal age to drink?  Enter your age" + (x) + "OK to drink?  " + canDrink)
+}
+var x = 21;
+var y = 20;
+var canDrink =  (x > 20 && y <= 21);
+console.log (verifyDrinkingAge, canDrink);
+/** 
  * #18
  * Function - throwParty
  * Create a function named throwParty. This function will check the value stored in the `canDrink` variable in the previous exercise. If the value is true, it will return the message "Cheee Hoo! We going to da party!" If false, then it will return the message "Meh, see you at Starbucks." Store the return value to a variable named `canParty`. Console.log your result.
  */
+function throwParty (canDrink){
+	if (canDrink == true) {
+		return "Cheee Hoo! We going to da party!"
+}else{ 
+		return "Meh, see you at Starbucks"
+	} 
+}
 
+	var canParty = throwParty(canDrink)
+	console.log (canParty);
 
